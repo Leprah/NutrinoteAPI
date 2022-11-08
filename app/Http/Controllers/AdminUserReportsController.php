@@ -46,10 +46,10 @@
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'Date Report','name'=>'date_report','type'=>'datetime','validation'=>'required|date_format:Y-m-d H:i:s','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Pre Image','name'=>'pre_image','type'=>'upload','validation'=>'required|image|max:2048','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Mood','name'=>'mood','type'=>'text','validation'=>'required|min:0|string','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Post Image','name'=>'post_image','type'=>'upload','validation'=>'required|image|max:2048','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Pre Image','name'=>'pre_image','type'=>'upload','validation'=>'image|max:2048','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Post Image','name'=>'post_image','type'=>'upload','validation'=>'image|max:2048','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Percentage (leftovers)','name'=>'percentage','type'=>'number','validation'=>'integer|min:0','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Mood','name'=>'mood','type'=>'select2','validation'=>'required|min:0|string','width'=>'col-sm-10','dataenum'=>'Senang/Semangat;Biasa Saja;Sedih/Sakit'];
 			$this->form[] = ['label'=>'Status Report','name'=>'status_report','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'proses;selesai'];
 			$this->form[] = ['label'=>'User','name'=>'id_user','type'=>'select2','validation'=>'required|min:0|string','width'=>'col-sm-10','datatable'=>'cms_users,name','datatable_where'=>'id != 1'];
 			$this->form[] = ['label'=>'Food','name'=>'id_food','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'gizi_food,name'];
