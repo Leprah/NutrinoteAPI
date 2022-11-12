@@ -20,13 +20,22 @@
 		    }
 
 		    public function hook_query(&$query) {
-		        //This method is to customize the sql query
-
+				
 		    }
 
 		    public function hook_after($postdata,&$result) {
-		        //This method will be execute after run the main process
+// get value from gizi_nutrition_foods where id_food=$postdata
 
+				$value_nutrition_food = DB::table('gizi_nutrition_foods')->where('id_food',  Request::get('id_food'))->get('value');
+				$id_nutritions_foods = DB::table('gizi_nutrition_foods')->where('id_food',  Request::get('id_food'))->get('');
+		        //This method will be execute after run the main process
+		        DB::table('total_nutritions_day')->insert([
+					'id_food'=> Request::get('id_food'),
+					'id_nutritions'=> Request::get($id_nutritions_foods),
+					'id_user'=> Request::get('id_user'),
+					'value'=> Request::get($value_nutrition_food),
+					'date'=> now()
+				]);
 		    }
 
 		}

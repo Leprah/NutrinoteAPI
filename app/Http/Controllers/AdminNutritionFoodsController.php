@@ -33,6 +33,7 @@
 			$this->col = [];
 			$this->col[] = ["label"=>"Makanan","name"=>"id_food","join"=>"gizi_food,name"];
 			$this->col[] = ["label"=>"Nutrisi","name"=>"id_nutrition","join"=>"gizi_nutritions,name"];
+			$this->col[] = ["label"=>"Total Nutrisi","name"=>"(SELECT count(value) FROM `gizi_nutritions` GROUP BY id_nutrition)as total_nutritions","callback_php"];
 			$this->col[] = ["label"=>"Nilai Nutrisi","name"=>"value","callback_php"=>'number_format([value],2)'];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 

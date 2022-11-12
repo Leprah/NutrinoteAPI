@@ -38,6 +38,8 @@
 			$this->col[] = ["label"=>"Mood","name"=>"mood"];
 			$this->col[] = ["label"=>"User","name"=>"id_user","join"=>"cms_users,name"];
 			$this->col[] = ["label"=>"Age","name"=>"id_user","join"=>"cms_users,age"];
+			$this->col[] = ["label"=>"Calorie","name"=>"id_food","join"=>"gizi_nutrition_foods,value"];
+			// SELECT id_user,SUM(value),id_nutitions FROM `total_nutritions_day` GROUP BY id_user,date,id_nutitions;
 			$this->col[] = ["label"=>"Height (cm)","name"=>"id_user","join"=>"cms_users,height"];
 			$this->col[] = ["label"=>"Weight (kg)","name"=>"id_user","join"=>"cms_users,weight"];
 			$this->col[] = ["label"=>"Food","name"=>"id_food","join"=>"gizi_food,name"];
