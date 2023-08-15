@@ -3,11 +3,3 @@
 <p align="center">
 NOTE
 </p>
-
-## Tentang Repo
-
-Repo ini merupakan repo dev untuk local, jika ingin push ke main harus merubah settingan configurasi <b>env</b>
-
-- Acc team
-- Config Database
-so on...
